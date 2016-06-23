@@ -8,7 +8,7 @@ public:
 			size = 1;
 		}
 		else if (size != sizeof(Example)) {  // new request of Derived Object.
-			::operator new(size);
+			return ::operator new(size);
 		}
 
 		void *pMem = malloc(size);
